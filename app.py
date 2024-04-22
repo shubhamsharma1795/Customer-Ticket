@@ -50,3 +50,13 @@ if uploaded_file is not None:
         age_group_counts.plot(kind='bar', color='skyblue')
         plt.title('Tickets Raised by Age Group')
         st.pyplot(fig)
+
+    # Ticket Status Distribution
+    if st.checkbox('Show Ticket Status Distribution'):
+        st.subheader('Ticket Status Distribution')
+        ticket_status_counts = data['Ticket Status'].value_counts()
+        fig, ax = plt.subplots()
+        ticket_status_counts.plot(kind='bar', color='skyblue')
+        plt.title('Ticket Status Distribution')
+        st.pyplot(fig)
+        
